@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #172033;
+}
+
+header {
+    text-align: center;
+    padding: 25px 15px;
+    background: #102a43;
+    color: white;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    color: #c9d8e8;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 25px auto;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.instrument,
+.controls {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 5px 20px #102a4315;
+}
+
+h2 {
+    margin-top: 0;
+    color: #102a43;
+    font-size: 21px;
+}
+
+.diagram {
+    width: 100%;
+    overflow: hidden;
+}
+
+svg {
+    width: 100%;
+    display: block;
+}
+
+.body {
+    fill: #f9fbfd;
+    stroke: #9aafc2;
+    stroke-width: 2;
+}
+
+.scale-arc {
+    fill: none;
+    stroke: #334e68;
+    stroke-width: 3;
+}
+
+.tick {
+    stroke: #334e68;
+    stroke-width: 2;
+}
+
+.tick.major {
+    stroke-width: 3;
+}
+
+.tick-label {
+    font-size: 15px;
+    fill: #243b53;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.iron-core {
+    fill: #526579;
+    stroke: #293e50;
+    stroke-width: 3;
+}
+
+.coil-base {
+    fill: #c96c25;
+    stroke: #813d15;
+    stroke-width: 3;
+}
+
+.coil-wire {
+    fill: none;
+    stroke: #ffd08a;
+    stroke-width: 7;
+    stroke-linecap: round;
+    opacity: 0.95;
+}
+
+.iron-vane {
+    fill: #b8c5d2;
+    stroke: #46596d;
+    stroke-width: 2;
+}
+
+.pointer {
+    stroke: #e53935;
+    stroke-width: 5;
+    stroke-linecap: round;
+    filter: drop-shadow(1px 2px 1px #777);
+}
+
+.pivot {
+    fill: #243b53;
+    stroke: #f9fbfd;
+    stroke-width: 3;
+}
+
+.label {
+    fill: #243b53;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.label-line {
+    stroke: #657b91;
+    stroke-width: 1.5;
+}
+
+.small-label {
+    fill: #627d98;
+    font-size: 13px;
+}
+
+.readings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.reading-card {
+    background: #edf5fc;
+    border: 1px solid #d5e3f0;
+    border-radius: 10px;
+    padding: 12px 5px;
+    text-align: center;
+}
+
+.reading-card span {
+    display: block;
+    font-size: 13px;
+    color: #526579;
+    margin-bottom: 7px;
+}
+
+.reading-card strong {
+    color: #102a43;
+    font-size: 19px;
+}
+
+.controls label {
+    display: block;
+    margin: 20px 0 10px;
+    font-weight: bold;
+}
+
+#sliderValue {
+    color: #0077cc;
+}
+
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+    accent-color: #0077cc;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    background: #0077cc;
+    color: white;
+    padding: 12px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    filter: brightness(0.92);
+}
+
+.stop {
+    background: #d93025;
+}
+
+.reset {
+    background: #526579;
+}
+
+.explanation {
+    background: #f0f6fb;
+    border-left: 4px solid #0077cc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 25px;
+    line-height: 1.6;
+}
+
+.explanation h3 {
+    margin-top: 0;
+    color: #102a43;
+}
+
+.explanation p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 850px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    .instrument,
+    .controls {
+        padding: 12px;
+    }
+
+    .reading-card strong {
+        font-size: 16px;
+    }
+
+    .reading-card span {
+        font-size: 11px;
+    }
+
+    button {
+        padding: 10px 12px;
+    }
+}
